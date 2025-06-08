@@ -38,9 +38,12 @@ set_foodweb_parameters_ODE.jl : set parameters for the Võrts food web, for the 
 
 
 To study the impact of
-    #  activity respiration: 
+
+    - activity respiration: 
         include a coefficient for activity respiration inside the function bioenergetic_discretized_detrital_loop of module DiscreteFoodWebModel (file "foodweb_model_discretized.jl")
-    # different feeding matrices:
+        
+    - different feeding matrices:
         type the feeding links inside the function initialize_vorts_foodweb (or initialize_vorts_foodweb_ODE_disc) of module SetFoodWebParameters (file "set_foodweb_parameters.jl")
-    # different thresholds for penalization of negative values:
+        
+    - different thresholds for penalization of negative values:
         change the value of "extinction_penalty_threshold" in the function initialize_MLE_options of module FittingOptions (file "foodweb_fitting_options.jl)
